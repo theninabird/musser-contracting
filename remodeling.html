@@ -37,7 +37,7 @@
     <![endif]-->
 
 </head>
-<body>
+<body class="work">
 			<nav class="navbar navbar-default">
   				<section class="container">
     				<section class="navbar-header">
@@ -78,6 +78,12 @@
 					<h1>Interior / Exterior Remodeling</h1>
 					<h4>Click thumbnail for larger image</h4>
 					<section id="gallery">
+						<a href="images/cabinetdoorrefinish.jpg" title="Cabinet door refinish">
+							<img src="images/cabinetdoorrefinish_thumbnail.jpg" />
+						</a>
+						<a href="images/vanity.jpg" title="Custom vanity build\install">
+							<img src="images/vanity_thumbnail.jpg" />
+						</a>
 						<a href="images/kitchen04.jpg" title="Kitchen remodel">
 							<img src="images/kitchen04_thumbnail.jpg" />
 						</a>
@@ -232,7 +238,7 @@
 				</section>
 				<script type="text/javascript">
 					$("#gallery").justifiedGallery({
-						lastRow: 'justify',
+						lastRow: 'nojustify',
 						rel: 'gallery',
 						captions: false
 					}).on('jg.complete', function () {
