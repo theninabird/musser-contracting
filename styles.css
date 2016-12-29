@@ -51,6 +51,10 @@ p {
 	margin-bottom:20px;
 }
 
+.contact-info {
+	margin: 40px 0;
+}
+
 #footer {
 	clear:both;
 	text-align:center;
