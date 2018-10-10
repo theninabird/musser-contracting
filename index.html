@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vincent Musser | Detail-Focused Remodeling &amp; Repair</title>
-    
+
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
-       
+
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -23,7 +23,7 @@
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 
 
-	<link rel="stylesheet" href="styles.css" type="text/css">      
+	<link rel="stylesheet" href="styles.css" type="text/css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,7 +34,13 @@
 
 </head>
 <body>
-			<nav class="navbar navbar-default navbar-fixed-top">
+            <section class="above-nav" style="background:#ac4646;color:white;padding:10px 0;font-family:'open sans';font-size:16px;">
+                <section class="container" style="text-align:right;">
+                    <span><a href="tel:7173156297" style="color:white;text-decoration:none;margin-right:40px;">(717) 315 6297</a></span>
+                    <span><a href="mailto:mussercontracting@gmail.com" style="color:white;text-decoration:none;">mussercontracting@gmail.com</a></span>
+                </section>
+            </section>
+			<nav class="navbar navbar-default" style="margin-bottom:0;">
   				<section class="container">
     				<section class="navbar-header">
     					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
@@ -69,19 +75,21 @@
 			  </section><!-- /container-fluid -->
 			</nav>
 			<section class="container-fluid">
-				<section class="row">	
-					<div class="fotorama" data-width="100%" data-height="100%" data-fit="cover" data-nav="false" data-autoplay="true">
-		  				<img src="images/test2.jpg">
-						<img src="images/test1.jpg">
-						<img src="images/kitchen-frontpage.jpg">
-					</div>
+				<section class="row">
+                    <div class="fotorama" data-transition="dissolve" data-transitionduration="1000" data-fit="cover" data-height="90%" data-autoplay="10000" data-loop="true">
+                      <img src="images/slide01.jpg">
+                      <img src="images/slide02.jpg">
+                      <img src="images/slide03.jpg">
+                      <img src="images/slide04.jpg">
+                      <img src="images/slide05.jpg">
+                    </div>
 				</section>
 		</section>
-		<footer class="footer">
+		<!-- <footer class="footer">
 			<p>
 				<span class="footer-phone"><a href="tel:7173156297">(717) 315 6297</a></span>
 				<span class="footer-email"><a href="mailto:mussercontracting@gmail.com">mussercontracting @ gmail.com</a></span>
 			</p>
-		</footer>
+		</footer> -->
     </body>
 </html>
