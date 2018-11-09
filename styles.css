@@ -1,18 +1,24 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);
 
-h1, h2, h3, h4, h5 {
-	font-family: Roboto;
+h1, h2 {
+	font-family: "PT Sans Narrow";
+}
+
+h3, h4, h5 {
+	font-family: "Work Sans", Arial, Helvetica, sans-serif;
 }
 
 h1 {
 	text-transform: uppercase;
-	font-weight:300;
+	font-weight:400;
 }
 
-p {
-	font-family: Roboto, Arial, Helvetica, sans-serif;
-	font-weight: 300;
+p, a {
+	font-family: "Work Sans", Arial, Helvetica, sans-serif;
+	font-weight: 400;
 	font-size: 18px;
+	/* letter-spacing: .5px; */
 }
 
 .navbar-fixed-top {
@@ -36,10 +42,20 @@ p {
 }
 
 .navbar ul li a {
-	font-family: Roboto;
-	font-size: 16px;
+	font-family: "PT Sans Narrow";
+	font-size: 22px;
 	text-transform: uppercase;
 	line-height: 50px;
+}
+
+.navbar-default .navbar-toggle {
+	border: none;
+	border-radius: 0;
+	margin-top: 25px;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background: transparent;
 }
 
 .about {
@@ -112,7 +128,7 @@ footer p {
 /* Colorbox CSS
 -------------------------------------------------- */
 #cboxTitle {
-	font-family: Roboto;
+	font-family: "Work Sans", sans-serif;
 	font-size: 18px;
 	line-height: 18px;
 }
