@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300);
 @import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);
-
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
 h1, h2 {
 	font-family: "PT Sans Narrow";
 }
@@ -42,8 +42,8 @@ p, a {
 }
 
 .navbar ul li a {
-	font-family: "PT Sans Narrow";
-	font-size: 22px;
+	font-family: "PT Sans";
+	font-size: 18px;
 	text-transform: uppercase;
 	line-height: 50px;
 }
