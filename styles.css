@@ -34,7 +34,7 @@ p, a {
 }
 
 .navbar-brand img {
-	height: 50px;
+	height: 75px;
 }
 
 .navbar-collapse {
@@ -45,7 +45,7 @@ p, a {
 	font-family: "PT Sans";
 	font-size: 18px;
 	text-transform: uppercase;
-	line-height: 50px;
+	line-height: 75px;
 }
 
 .navbar-default .navbar-toggle {
