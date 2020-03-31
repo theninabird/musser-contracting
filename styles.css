@@ -43,11 +43,25 @@ p, a {
 	text-align: center;
 }
 
+.navbar-nav {
+	margin: 0 -15px;
+}
+
 .navbar ul li a {
 	font-family: "Roboto";
 	font-weight: 300;
 	font-size: 18px;
-	line-height: 75px;
+	line-height: 40px;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+	line-height: 40px;
+}
+
+@media (min-width: 768px) {
+	.navbar ul li a {
+		line-height: 75px;
+	}
 }
 
 .navbar ul.dropdown-menu li a {
@@ -193,6 +207,11 @@ body {
 	}
 }
 
+.navbar-nav .open .dropdown-menu {
+	text-align: center;
+	background-color: #f6f6f6;
+}
+
 @media (min-width: 768px) {
 	.dropdown:hover .dropdown-menu {
 	    display: block;
@@ -200,5 +219,10 @@ body {
 
 	 .dropdown-menu {
 		 top: calc(100% - 1px);
+		 text-align: left;
+	 }
+
+	 .navbar-nav .open .dropdown-menu {
+		 background-color: white;
 	 }
 }
