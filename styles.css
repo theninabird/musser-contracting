@@ -1,24 +1,26 @@
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300);
-@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);
-@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400);
 h1, h2 {
-	font-family: "PT Sans Narrow";
+	font-family: "Roboto";
+	font-weight: 300;
 }
 
 h3, h4, h5 {
-	font-family: "Work Sans", Arial, Helvetica, sans-serif;
+	font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 h1 {
-	text-transform: uppercase;
-	font-weight:400;
+	/* text-transform: uppercase; */
 }
 
 p, a {
-	font-family: "Work Sans", Arial, Helvetica, sans-serif;
-	font-weight: 400;
+	font-family: "Roboto", Arial, Helvetica, sans-serif;
+	font-weight: 300;
 	font-size: 18px;
 	/* letter-spacing: .5px; */
+}
+
+.above-nav a {
+	font-weight: 300;
 }
 
 .navbar-fixed-top {
@@ -42,14 +44,21 @@ p, a {
 }
 
 .navbar ul li a {
-	font-family: "PT Sans";
+	font-family: "Roboto";
+	font-weight: 300;
 	font-size: 18px;
-	text-transform: uppercase;
 	line-height: 75px;
 }
 
 .navbar ul.dropdown-menu li a {
 	line-height: 40px;
+}
+
+.navbar-default {
+	background-color: white;
+	border: none;
+	-webkit-box-shadow: 2px 0px 4.9px 0.1px rgba(0, 0, 0, 0.1);
+	        box-shadow: 2px 0px 4.9px 0.1px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-default .navbar-toggle {
@@ -132,7 +141,7 @@ footer p {
 /* Colorbox CSS
 -------------------------------------------------- */
 #cboxTitle {
-	font-family: "Work Sans", sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-size: 18px;
 	line-height: 18px;
 }
@@ -187,6 +196,9 @@ body {
 @media (min-width: 768px) {
 	.dropdown:hover .dropdown-menu {
 	    display: block;
-	    margin-top: 0; // remove the gap so it doesn't close
+	 }
+
+	 .dropdown-menu {
+		 top: calc(100% - 1px);
 	 }
 }
