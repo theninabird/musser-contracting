@@ -96,20 +96,47 @@
 					<h1>Custom Cabinetry/Carpentry</h1>
 					<p>Click thumbnail for larger image</p>
 					<section id="gallery">
+            <a href="images/bench.jpg" title="Bench">
+              <img src="images/bench.jpg" />
+            </a>
+            <a href="images/vanity-build.jpg" title="Vanity build\install">
+              <img src="images/vanity-build.jpg" />
+            </a>
+            <a href="images/kitchen-build05.jpg" title="Custom kitchen build\install">
+              <img src="images/kitchen-build05.jpg" />
+            </a>
+            <a href="images/kitchen-build04.jpg" title="Custom kitchen build\install">
+              <img src="images/kitchen-build04.jpg" />
+            </a>
+            <a href="images/kitchen-build03.jpg" title="Custom kitchen build\install">
+              <img src="images/kitchen-build03.jpg" />
+            </a>
+            <a href="images/kitchen-build02.jpg" title="Custom kitchen build\install">
+              <img src="images/kitchen-build02.jpg" />
+            </a>
+            <a href="images/kitchen-build01.jpg" title="Custom kitchen build\install">
+              <img src="images/kitchen-build01.jpg" />
+            </a>
+            <a href="images/vanity-build02.jpg" title="Vanity build\install">
+              <img src="images/vanity-build02.jpg" />
+            </a>
+            <a href="images/vanity-build01.jpg" title="Vanity build\install">
+              <img src="images/vanity-build01.jpg" />
+            </a>
             <a href="images/custom-cabinet-details.jpg" title="Custom cabinetry details">
-              <img src="images/custom-cabinet-details_thumbnail.jpg" />
+              <img src="images/custom-cabinet-details.jpg" />
             </a>
             <a href="images/slide01.jpg" title="Custom cabinetry">
-              <img src="images/slide01_thumbnail.jpg" />
+              <img src="images/slide01.jpg" />
             </a>
             <a href="images/vanity.jpg" title="Custom vanity build\install">
               <img src="images/vanity_thumbnail.jpg" />
             </a>
             <a href="images/wine-rack-02.jpg" title="Cabinetry with wine rack and wine cooler">
-              <img src="images/wine-rack-02_thumbnail.jpg" />
+              <img src="images/wine-rack-02.jpg" />
             </a>
             <a href="images/wine-rack-01.jpg" title="Cabinetry with wine rack and wine cooler">
-              <img src="images/wine-rack-01_thumbnail.jpg" />
+              <img src="images/wine-rack-01.jpg" />
             </a>
             <a href="images/butcher-block-desk-01.jpg" title="Butcher block desk, cabinets">
               <img src="images/butcher-block-desk-01_thumbnail.jpg" />
@@ -118,10 +145,10 @@
               <img src="images/butcher-block-desk-02_thumbnail.jpg" />
             </a>
             <a href="images/custom-cabinets-oak02.jpg" title="Custom oak cabinetry">
-              <img src="images/custom-cabinets-oak02_thumbnail.jpg" />
+              <img src="images/custom-cabinets-oak02.jpg" />
             </a>
             <a href="images/custom-cabinets-oak01.jpg" title="Custom oak cabinetry">
-              <img src="images/custom-cabinets-oak01_thumbnail.jpg" />
+              <img src="images/custom-cabinets-oak01.jpg" />
             </a>
             <a href="images/custom-cabinets02.jpg" title="Custom cabinetry">
               <img src="images/custom-cabinets02_thumbnail.jpg" />
@@ -213,21 +240,32 @@
 					</section>
 				</section>
 				<script type="text/javascript">
-					$("#gallery").justifiedGallery({
-						lastRow: 'nojustify',
-						rel: 'gallery',
-						captions: false
-					}).on('jg.complete', function () {
-					    $(this).find('a').colorbox({
-					        maxWidth: '80%',
-					        maxHeight: '80%',
-					        minWidth: '',
-					        minHeight : '',
-					        opacity : 0.8,
-					        transition : 'elastic',
-					        current : ''
-					    });
-					});
+					// $("#gallery").justifiedGallery({
+					// 	lastRow: 'nojustify',
+					// 	rel: 'gallery',
+					// 	captions: false
+					// }).on('jg.complete', function () {
+					//     $(this).find('a').colorbox({
+					//         maxWidth: '80%',
+					//         maxHeight: '80%',
+					//         minWidth: '',
+					//         minHeight : '',
+					//         opacity : 0.8,
+					//         transition : 'elastic',
+					//         current : ''
+					//     });
+					// });
+
+          $('#gallery').find('a').colorbox({
+              rel: 'gal',
+              maxWidth: '80%',
+              maxHeight: '80%',
+              minWidth: '',
+              minHeight : '',
+              opacity : 0.8,
+              transition : 'elastic',
+              current : ''
+          });
 
 					/* Fix for long ColorBox titles */
 					$(document).bind('cbox_complete', function(){

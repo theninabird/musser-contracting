@@ -86,11 +86,20 @@
 					<h1>Interior / Exterior Remodeling</h1>
 					<h4>Click thumbnail for larger image</h4>
 					<section id="gallery">
+            <a href="images/bathroom-remodel.jpg" title="Bathroom remodel">
+              <img src="images/bathroom-remodel.jpg" />
+            </a>
+            <a href="images/custom-stone-fireplace.jpg" title="Custom stone fireplace">
+              <img src="images/custom-stone-fireplace.jpg" />
+            </a>
+            <a href="images/kitchen-remodel-2020.jpg" title="Kitchen remodel">
+              <img src="images/kitchen-remodel-2020.jpg" />
+            </a>
             <a href="images/garage-to-studio-beforeafter.jpg" title="Garage to studio conversion">
               <img src="images/garage-to-studio-beforeafter_thumbnail.jpg" />
             </a>
             <a href="images/garage-to-studio-beforeafter02.jpg" title="Garage to studio conversion">
-              <img src="images/garage-to-studio-beforeafter02_thumbnail.jpg" />
+              <img src="images/garage-to-studio-beforeafter02.jpg" />
             </a>
             <a href="images/garage-to-studio-beforeafter03.jpg" title="Garage to studio conversion">
               <img src="images/garage-to-studio-beforeafter03_thumbnail.jpg" />
@@ -105,7 +114,7 @@
               <img src="images/remodel02_thumbnail.jpg" />
             </a>
             <a href="images/room-addition.jpg" title="Room addition">
-              <img src="images/room-addition_thumbnail.jpg" />
+              <img src="images/room-addition.jpg" />
             </a>
             <a href="images/custom-cabinet-details.jpg" title="Custom cabinetry details">
 							<img src="images/custom-cabinet-details_thumbnail.jpg" />
@@ -272,21 +281,32 @@
 					</section>
 				</section>
 				<script type="text/javascript">
-					$("#gallery").justifiedGallery({
-						lastRow: 'nojustify',
-						rel: 'gallery',
-						captions: false
-					}).on('jg.complete', function () {
-					    $(this).find('a').colorbox({
-					        maxWidth: '80%',
-					        maxHeight: '80%',
-					        minWidth: '',
-					        minHeight : '',
-					        opacity : 0.8,
-					        transition : 'elastic',
-					        current : ''
-					    });
-					});
+					// $("#gallery").justifiedGallery({
+					// 	lastRow: 'nojustify',
+					// 	rel: 'gallery',
+					// 	captions: false
+					// }).on('jg.complete', function () {
+					//     $(this).find('a').colorbox({
+					//         maxWidth: '80%',
+					//         maxHeight: '80%',
+					//         minWidth: '',
+					//         minHeight : '',
+					//         opacity : 0.8,
+					//         transition : 'elastic',
+					//         current : ''
+					//     });
+					// });
+
+          $('#gallery').find('a').colorbox({
+              rel: 'gal',
+              maxWidth: '80%',
+              maxHeight: '80%',
+              minWidth: '',
+              minHeight : '',
+              opacity : 0.8,
+              transition : 'elastic',
+              current : ''
+          });
 
 					/* Fix for long ColorBox titles */
 					$(document).bind('cbox_complete', function(){

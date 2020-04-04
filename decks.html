@@ -86,6 +86,12 @@
 					<h1>Decks</h1>
 					<h4>Click thumbnail for larger image</h4>
 					<section id="gallery">
+              <a href="images/deck-bench01.jpg" title="Deck">
+                <img src="images/deck-bench01.jpg" />
+              </a>
+              <a href="images/deck-bench02.jpg" title="Deck">
+                <img src="images/deck-bench02.jpg" />
+              </a>
               <a href="images/deck.jpg" title="Deck build">
                 <img src="images/deck_thumbnail.jpg" />
               </a>
@@ -134,21 +140,32 @@
 					</section>
 				</section>
 				<script type="text/javascript">
-					$("#gallery").justifiedGallery({
-						lastRow: 'justify',
-						rel: 'gallery',
-						captions: false
-					}).on('jg.complete', function () {
-					    $(this).find('a').colorbox({
-					        maxWidth: '80%',
-					        maxHeight: '80%',
-					        minWidth: '',
-					        minHeight : '',
-					        opacity : 0.8,
-					        transition : 'elastic',
-					        current : ''
-					    });
-					});
+					// $("#gallery").justifiedGallery({
+					// 	lastRow: 'justify',
+					// 	rel: 'gallery',
+					// 	captions: false
+					// }).on('jg.complete', function () {
+					//     $(this).find('a').colorbox({
+					//         maxWidth: '80%',
+					//         maxHeight: '80%',
+					//         minWidth: '',
+					//         minHeight : '',
+					//         opacity : 0.8,
+					//         transition : 'elastic',
+					//         current : ''
+					//     });
+					// });
+
+          $('#gallery').find('a').colorbox({
+              rel: 'gal',
+              maxWidth: '80%',
+              maxHeight: '80%',
+              minWidth: '',
+              minHeight : '',
+              opacity : 0.8,
+              transition : 'elastic',
+              current : ''
+          });
 
 					/* Fix for long ColorBox titles */
 					$(document).bind('cbox_complete', function(){

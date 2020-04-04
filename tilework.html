@@ -86,6 +86,45 @@
 					<h1>Tile Work</h1>
 					<h4>Click thumbnail for larger image</h4>
 					<section id="gallery">
+            <a href="images/tilework2020.jpg" title="Tilework">
+              <img src="images/tilework2020.jpg" />
+            </a>
+            <a href="images/shower-stall-bw04.jpg" title="Shower stall">
+              <img src="images/shower-stall-bw04.jpg" />
+            </a>
+            <a href="images/shower-stall-bw03.jpg" title="Shower stall">
+              <img src="images/shower-stall-bw03.jpg" />
+            </a>
+            <a href="images/shower-stall-bw02.jpg" title="Shower stall">
+              <img src="images/shower-stall-bw02.jpg" />
+            </a>
+            <a href="images/shower-stall-bw01.jpg" title="Shower stall">
+              <img src="images/shower-stall-bw01.jpg" />
+            </a>
+            <a href="images/tile-floor02.jpg" title="Tile floor">
+              <img src="images/tile-floor02.jpg" />
+            </a>
+            <a href="images/tile-floor.jpg" title="Tile floor">
+              <img src="images/tile-floor.jpg" />
+            </a>
+            <a href="images/shower-stall-blue01.jpg" title="Shower stall">
+              <img src="images/shower-stall-blue01.jpg" />
+            </a>
+            <a href="images/shower-stall-blue02.jpg" title="Shower stall">
+              <img src="images/shower-stall-blue02.jpg" />
+            </a>
+            <a href="images/shower-stall-blue03.jpg" title="Shower stall">
+              <img src="images/shower-stall-blue03.jpg" />
+            </a>
+            <a href="images/shower-stall-blue04.jpg" title="Shower stall">
+              <img src="images/shower-stall-blue04.jpg" />
+            </a>
+            <a href="images/shower-stall02.jpg" title="Shower stall">
+              <img src="images/shower-stall02.jpg" />
+            </a>
+            <a href="images/shower-stall01.jpg" title="Shower stall">
+              <img src="images/shower-stall01.jpg" />
+            </a>
             <a href="images/shower-stall-detail.jpg" title="Shower stall detail">
 							<img src="images/shower-stall-detail_thumbnail.jpg" />
 						</a>
@@ -239,21 +278,32 @@
 					</section>
 				</section>
 				<script type="text/javascript">
-					$("#gallery").justifiedGallery({
-						lastRow: 'justify',
-						rel: 'gallery',
-						captions: false
-					}).on('jg.complete', function () {
-					    $(this).find('a').colorbox({
-					        maxWidth: '80%',
-					        maxHeight: '80%',
-					        minWidth: '',
-					        minHeight : '',
-					        opacity : 0.8,
-					        transition : 'elastic',
-					        current : ''
-					    });
-					});
+					// $("#gallery").justifiedGallery({
+					// 	lastRow: 'justify',
+					// 	rel: 'gallery',
+					// 	captions: false
+					// }).on('jg.complete', function () {
+					//     $(this).find('a').colorbox({
+					//         maxWidth: '80%',
+					//         maxHeight: '80%',
+					//         minWidth: '',
+					//         minHeight : '',
+					//         opacity : 0.8,
+					//         transition : 'elastic',
+					//         current : ''
+					//     });
+					// });
+
+          $('#gallery').find('a').colorbox({
+              rel: 'gal',
+              maxWidth: '80%',
+              maxHeight: '80%',
+              minWidth: '',
+              minHeight : '',
+              opacity : 0.8,
+              transition : 'elastic',
+              current : ''
+          });
 
 					/* Fix for long ColorBox titles */
 					$(document).bind('cbox_complete', function(){

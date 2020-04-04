@@ -140,21 +140,32 @@
 					</section>
 				</section>
 				<script type="text/javascript">
-					$("#gallery").justifiedGallery({
-						lastRow: 'justify',
-						rel: 'gallery',
-						captions: false
-					}).on('jg.complete', function () {
-					    $(this).find('a').colorbox({
-					        maxWidth: '80%',
-					        maxHeight: '80%',
-					        minWidth: '',
-					        minHeight : '',
-					        opacity : 0.8,
-					        transition : 'elastic',
-					        current : ''
-					    });
-					});
+					// $("#gallery").justifiedGallery({
+					// 	lastRow: 'justify',
+					// 	rel: 'gallery',
+					// 	captions: false
+					// }).on('jg.complete', function () {
+					//     $(this).find('a').colorbox({
+					//         maxWidth: '80%',
+					//         maxHeight: '80%',
+					//         minWidth: '',
+					//         minHeight : '',
+					//         opacity : 0.8,
+					//         transition : 'elastic',
+					//         current : ''
+					//     });
+					// });
+
+          $('#gallery').find('a').colorbox({
+              rel: 'gal',
+              maxWidth: '80%',
+              maxHeight: '80%',
+              minWidth: '',
+              minHeight : '',
+              opacity : 0.8,
+              transition : 'elastic',
+              current : ''
+          });
 
 					/* Fix for long ColorBox titles */
 					$(document).bind('cbox_complete', function(){
