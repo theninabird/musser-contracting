@@ -26,6 +26,9 @@
 	<link rel="stylesheet" href="colorbox/colorbox.css" />
 	<script src="colorbox/jquery.colorbox-min.js"></script>
 
+	<!-- Lazy Loading -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+
 
 	<link rel="stylesheet" href="styles.css" type="text/css">
 
@@ -87,88 +90,76 @@
 					<h4>Click thumbnail for larger image</h4>
 					<section id="gallery">
 						<a href="images/deck-with-tie-in-roof.jpg" title="Deck with tie-in roof">
-							<img src="images/deck-with-tie-in-roof.jpg" />
+							<img class="lozad" data-src="images/deck-with-tie-in-roof.jpg" />
 						</a>
 						<a href="images/deck-bench01.jpg" title="Deck">
-							<img src="images/deck-bench01.jpg" />
+							<img class="lozad" data-src="images/deck-bench01.jpg" />
 						</a>
 						<a href="images/deck-bench02.jpg" title="Deck">
-							<img src="images/deck-bench02.jpg" />
+							<img class="lozad" data-src="images/deck-bench02.jpg" />
 						</a>
 						<a href="images/deck.jpg" title="Deck build">
-							<img src="images/deck_thumbnail.jpg" />
+							<img class="lozad" data-src="images/deck_thumbnail.jpg" />
 						</a>
 						  <a href="images/deck-build.JPG" title="Deck build">
-				        <img src="images/deck-build_thumbnail.JPG" />
+				        <img class="lozad" data-src="images/deck-build_thumbnail.JPG" />
 					    </a>
 					    <a href="images/deck06.jpg" title="Deck">
-					        <img src="images/deck06_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/deck06_thumbnail.jpg" />
 					    </a>
 					    <a href="images/deck-flashing.jpg" title="Deck flashing re-work">
-					        <img src="images/deck-flashing_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/deck-flashing_thumbnail.jpg" />
 					    </a>
 					    <a href="images/deck-before-after.jpg" title="Deck replacement">
-					        <img src="images/deck-before-after_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/deck-before-after_thumbnail.jpg" />
 					    </a>
 					    <a href="images/deck05.jpg" title="Deck">
-					        <img src="images/deck05_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/deck05_thumbnail.jpg" />
 					    </a>
 					    <a href="images/deck04.jpg" title="Deck">
-					        <img src="images/deck04_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/deck04_thumbnail.jpg" />
 					    </a>
 					    <a href="images/deck03.jpg" title="Deck">
-					        <img src="images/deck03_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/deck03_thumbnail.jpg" />
 					    </a>
 					    <a href="images/deckwroof.jpg" title="Deck with roof">
-					        <img src="images/deckwroof_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/deckwroof_thumbnail.jpg" />
 					    </a>
 					    <a href="images/reddeck01.jpg" title="Deck">
-					        <img src="images/reddeck01_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/reddeck01_thumbnail.jpg" />
 					    </a>
 					    <a href="images/deck02.jpg" title="Deck">
-					        <img src="images/deck02_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/deck02_thumbnail.jpg" />
 					    </a>
 					    <a href="images/deck01.jpg" title="Deck">
-					        <img src="images/deck01_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/deck01_thumbnail.jpg" />
 					    </a>
 					    <a href="images/roof03.jpg" title="Deck with roof">
-					        <img src="images/roof03_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/roof03_thumbnail.jpg" />
 					    </a>
 					    <a href="images/roof02.jpg" title="Deck with roof">
-					        <img src="images/roof02_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/roof02_thumbnail.jpg" />
 					    </a>
 					    <a href="images/roof01.jpg" title="Deck with roof">
-					        <img src="images/roof01_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/roof01_thumbnail.jpg" />
 					    </a>
 					</section>
 				</section>
 				<script type="text/javascript">
-					// $("#gallery").justifiedGallery({
-					// 	lastRow: 'justify',
-					// 	rel: 'gallery',
-					// 	captions: false
-					// }).on('jg.complete', function () {
-					//     $(this).find('a').colorbox({
-					//         maxWidth: '80%',
-					//         maxHeight: '80%',
-					//         minWidth: '',
-					//         minHeight : '',
-					//         opacity : 0.8,
-					//         transition : 'elastic',
-					//         current : ''
-					//     });
-					// });
+					// Lazy loading
+					const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+					observer.observe();	
 
-          $('#gallery').find('a').colorbox({
-              rel: 'gal',
-              maxWidth: '80%',
-              maxHeight: '80%',
-              minWidth: '',
-              minHeight : '',
-              opacity : 0.8,
-              transition : 'elastic',
-              current : ''
-          });
+					$('#gallery').find('a').colorbox({
+						rel: 'gal',
+						maxWidth: '80%',
+						maxHeight: '80%',
+						minWidth: '',
+						minHeight : '',
+						opacity : 0.8,
+						transition : 'elastic',
+						current : ''
+					});
 
 					/* Fix for long ColorBox titles */
 					$(document).bind('cbox_complete', function(){

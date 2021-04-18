@@ -26,6 +26,9 @@
 	<link rel="stylesheet" href="colorbox/colorbox.css" />
 	<script src="colorbox/jquery.colorbox-min.js"></script>
 
+	<!-- Lazy Loading -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+
 
 	<link rel="stylesheet" href="styles.css" type="text/css">
 
@@ -87,85 +90,73 @@
 					<h4>Click thumbnail for larger image</h4>
 					<section id="gallery">
 						<a href="images/windowinstall02.jpg" title="Window install">
-					        <img src="images/windowinstall02_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/windowinstall02_thumbnail.jpg" />
 					    </a>
 					    <a href="images/windowinstall01.jpg" title="Window install">
-					        <img src="images/windowinstall01_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/windowinstall01_thumbnail.jpg" />
 					    </a>
 						<a href="images/door-install-02.jpg" title="Door install">
-					        <img src="images/door-install-02_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/door-install-02_thumbnail.jpg" />
 					    </a>
 						<a href="images/door-install-01.jpg" title="Door install">
-					        <img src="images/door-install-01_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/door-install-01_thumbnail.jpg" />
 					    </a>
 						<a href="images/door-install.JPG" title="Masonry window opening to door change, door install">
-					        <img src="images/door-install_thumbnail.JPG" />
+					        <img class="lozad" data-src="images/door-install_thumbnail.JPG" />
 					    </a>
 						<a href="images/vinyl-window03.JPG" title="Vinyl window replacement">
-					        <img src="images/vinyl-window03_thumbnail.JPG" />
+					        <img class="lozad" data-src="images/vinyl-window03_thumbnail.JPG" />
 					    </a>
 					    <a href="images/vinyl-window02.JPG" title="Vinyl window replacement">
-					        <img src="images/vinyl-window02_thumbnail.JPG" />
+					        <img class="lozad" data-src="images/vinyl-window02_thumbnail.JPG" />
 					    </a>
 						<a href="images/vinyl-window01.JPG" title="Vinyl window replacement">
-					        <img src="images/vinyl-window01_thumbnail.JPG" />
+					        <img class="lozad" data-src="images/vinyl-window01_thumbnail.JPG" />
 					    </a>
 						<a href="images/sliding-to-opening.jpg" title="Sliding door converted to opening, before &amp; after">
-					        <img src="images/sliding-to-opening_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/sliding-to-opening_thumbnail.jpg" />
 					    </a>
 					    <a href="images/sliding-to-opening02.jpg" title="Sliding door converted to opening, before &amp; after">
-					        <img src="images/sliding-to-opening02_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/sliding-to-opening02_thumbnail.jpg" />
 					    </a>
 					    <a href="images/sliding-to-opening04.jpg" title="Sliding door converted to opening, detail">
-					        <img src="images/sliding-to-opening04_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/sliding-to-opening04_thumbnail.jpg" />
 					    </a>
 						<a href="images/doors-and-trim.jpg" title="Doors and trim">
-					        <img src="images/doors-and-trim_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/doors-and-trim_thumbnail.jpg" />
 					    </a>
 					    <a href="images/window-trim.jpg" title="Window trim before &amp; after">
-					        <img src="images/window-trim_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/window-trim_thumbnail.jpg" />
 					    </a>
 					    <a href="images/DoorsandWindows-InteriorDoors.jpg" title="Interior doors">
-					        <img src="images/DoorsandWindows-InteriorDoors_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/DoorsandWindows-InteriorDoors_thumbnail.jpg" />
 					    </a>
 					    <a href="images/window-replacement.jpg" title="Vinyl window replacement">
-					        <img src="images/window-replacement_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/window-replacement_thumbnail.jpg" />
 					    </a>
 					    <a href="images/window01.jpg" title="Window install">
-					        <img src="images/window01.jpg" />
+					        <img class="lozad" data-src="images/window01.jpg" />
 					    </a>
 					    <a href="images/red-door.jpg" title="Door install">
-					        <img src="images/red-door_thumbnail.jpg" />
+					        <img class="lozad" data-src="images/red-door_thumbnail.jpg" />
 					    </a>
 					</section>
 				</section>
 				<script type="text/javascript">
-					// $("#gallery").justifiedGallery({
-					// 	lastRow: 'justify',
-					// 	rel: 'gallery',
-					// 	captions: false
-					// }).on('jg.complete', function () {
-					//     $(this).find('a').colorbox({
-					//         maxWidth: '80%',
-					//         maxHeight: '80%',
-					//         minWidth: '',
-					//         minHeight : '',
-					//         opacity : 0.8,
-					//         transition : 'elastic',
-					//         current : ''
-					//     });
-					// });
+					// Lazy loading
+					const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+					observer.observe();	
 
-          $('#gallery').find('a').colorbox({
-              rel: 'gal',
-              maxWidth: '80%',
-              maxHeight: '80%',
-              minWidth: '',
-              minHeight : '',
-              opacity : 0.8,
-              transition : 'elastic',
-              current : ''
-          });
+					$('#gallery').find('a').colorbox({
+						rel: 'gal',
+						maxWidth: '80%',
+						maxHeight: '80%',
+						minWidth: '',
+						minHeight : '',
+						opacity : 0.8,
+						transition : 'elastic',
+						current : ''
+					});
 
 					/* Fix for long ColorBox titles */
 					$(document).bind('cbox_complete', function(){
